@@ -22,7 +22,7 @@ let random;
 class Game {
     constructor () { 
         this.missed = 0;
-        this.phrases = [ {phrase: 'We make a great pear'}, {phrase: 'Orange you glad we are friends'}, {phrase: 'You are one in a melon'}, {phrase: 'Pineapples on pizza are my jam'}, {phrase: 'Thank you berry much'}
+        this.phrases = [ new Phrase ('We make a great pear'), new Phrase ( 'Orange you glad we are friends'), new Phrase ('You are one in a melon'), new Phrase ('Pineapples on pizza are my jam'), new Phrase ('Thank you berry much')
         ];
         activePhrase = 'null'; 
     }

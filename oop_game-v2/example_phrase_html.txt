@@ -13,3 +13,11 @@
         <li class="hide letter u">u</li>
     </ul>
 </div>
+
+loop over each of the letters in the phrase
+    *if* the letter is a space  ( " " )
+        create an `li` element with the class `space`
+    *else* 
+         create an `li` element with the classes `hide letter` and the letter that is being looped over
+    set the textContent of the `li` to be the character that is being looped over
+    append the `li` element to the `#phrase ul`
