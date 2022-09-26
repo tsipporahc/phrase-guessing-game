@@ -4,13 +4,13 @@
  * Purpose: To create a Phrase class to handle the creation of phrases */
 
 const phraseSection = document.getElementById('phrase') // div
-//const lettersPlaceholder = phraseSection.children; // ul
-let lettersList = document.createElement('li'); // li
+const lettersPlaceholder = phraseSection.children; // ul
 
-let letterSection = phraseSection.appendChild(lettersList); // adds li to ul
+let letterList = lettersPlaceholder[0];
 
-letterSection.innerHTML = '';
-console.log(letterSection);
+let phraseLetterArray = [];
+letterList.innerHTML = '';
+
 
 class Phrase {
     constructor (phrase) { // intializes phrase and addPhraseToDisplay(), checkLetter(), showMatchedLetter()
@@ -33,9 +33,19 @@ class Phrase {
             console.log(phraseLetterArray);
 
         for (let i = 0; i < phraseLetterArray.length; i++) {
-            letterSection.innerHTML += `<li>${phraseLetterArray[i]}</li>`;
-
-        }
+            let letter = phraseLetterArray[i];
+        
+            if (letter === ' ') {
+                let li = document.createElement('li');
+                li.className += 'space';
+                li.textContent = `${letter}`;
+                letterList.appendChild(li);
+            } else {
+                let li = document.createElement('li');
+                li.className += `hide letter ${letter}`;
+                li.textContent = `${letter}`;
+                letterList.appendChild(li);
+            }
 
         /* console.log(phrase); // returns random object
         console.log(this.phrase); // returns random string */
@@ -45,4 +55,4 @@ class Phrase {
 }
 
 
-
+}
