@@ -49,6 +49,12 @@ class Game {
 
         }
 
+        handleInteraction = () => {
+
+
+            
+        }
+
 }
 
 

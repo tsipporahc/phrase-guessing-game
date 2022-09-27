@@ -11,6 +11,8 @@ let letterList = lettersPlaceholder[0];
 let phraseLetterArray = [];
 letterList.innerHTML = '';
 
+let matchedLetter = '';
+
 
 class Phrase {
     constructor (phrase) { // intializes phrase and addPhraseToDisplay(), checkLetter(), showMatchedLetter()
@@ -19,15 +21,15 @@ class Phrase {
 
        // }
 
-    }
+    };
 
     /**
     * Display phrase on game board
     */
-     addPhraseToDisplay = () => {
+    addPhraseToDisplay = () => {
 
         
-        let phraseLetterArray = phrase.phrase.split(''); // return array of letters
+        let phraseLetterArray = this.phrase.split(''); // return array of letters
         console.log(phraseLetterArray);
 
         for (let i = 0; i < phraseLetterArray.length; i++) {
@@ -45,12 +47,52 @@ class Phrase {
                 letterList.appendChild(li);
             }
 
-        /* console.log(phrase); // returns random object
-        console.log(this.phrase); // returns random string */
-    }
+
+        }
 
 
-}
+    };
+
+        /**
+        * Checks if passed letter is in phrase
+        * @param (string) letter - Letter to check
+        */
+    checkLetter = (letter) => {
+            let phraseLetterArray = this.phrase.split('');
+            
+            if (phraseLetterArray.includes(letter)) {
+                return true;
+            } else {
+                return false;
+            }
+    };
+
+        /**
+        * Displays passed letter on screen after a match is found
+        * @param (string) letter - Letter to display
+        */
+    showMatchedLetter(letter) {
+// select letter DOM with CSS class name that matches the ' letter ${letter}'
+// replace CSS class name from 'hide' to 'show'
+        if (letter) {
+            const letterDisplay = document.getElementsByClassName(`${letter}`);
+            console.log(letterDisplay);
+            
+            for(let i=0; i < letterDisplay.length; i++) {
+            letterDisplay[i].classList.remove('hide');
+            letterDisplay[i].classList.add('show');
+            letterDisplay[i].style.display == 'none';
+            }
+        }
+
+        };
+
+
+
+
+
+
+
 
 
 }

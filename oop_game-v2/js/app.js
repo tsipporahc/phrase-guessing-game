@@ -39,7 +39,14 @@ const logPhrase = (phrase) => {
     game.getRandomPhrase().addPhraseToDisplay(); */
 
     // 5. test the startGame()
-
-    const game = new Game();
+/*     const game = new Game();
     game.startGame();
-    console.log(`Active Phrase - phrase: ${game.activePhrase.phrase}`);
+    console.log(`Active Phrase - phrase: ${game.activePhrase.phrase}`); */
+
+    let game = '';
+    const startButton = document.getElementById('btn__reset');
+   
+    startButton.addEventListener('click', () => {
+        game = new Game();
+        game.startGame();
+    })
