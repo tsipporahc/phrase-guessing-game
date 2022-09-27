@@ -18,6 +18,8 @@ let phrases = [];
 let activePhrase;
 let random;
 const overlay = document.getElementById('overlay');
+const activePhraseLetters = document.getElementsByClassName('letter');
+let hiddenLetters = document.getElementsByClassName('hide');
 
 class Game {
     constructor () { 
@@ -50,10 +52,29 @@ class Game {
         }
 
         handleInteraction = () => {
+            this.checkForWin(); // make into callback???
 
 
-            
         }
+
+        /**
+        * Checks for winning move
+        * @return {boolean} True if game has been won, false if game wasn't won
+        */
+        checkForWin = () => {
+            console.log(hiddenLetters);
+            console.log(hiddenLetters.length);
+
+            if (hiddenLetters.length > 0) {
+                return false;
+            } else {
+                return true;
+            }
+
+        };
+
+
+
 
 }
 
