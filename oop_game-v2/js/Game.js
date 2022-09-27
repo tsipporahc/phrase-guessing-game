@@ -44,7 +44,7 @@ class Game {
         startGame = () => {
             overlay.style.display = 'none';
             this.activePhrase = this.getRandomPhrase();
-            activePhrase.addPhraseToDisplay();
+            this.activePhrase.addPhraseToDisplay();
 
 
         }

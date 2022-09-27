@@ -27,7 +27,7 @@ class Phrase {
      addPhraseToDisplay = () => {
 
         
-        let phraseLetterArray = phrase.phrase.split(''); // return array or letters
+        let phraseLetterArray = phrase.phrase.split(''); // return array of letters
         console.log(phraseLetterArray);
 
         for (let i = 0; i < phraseLetterArray.length; i++) {
