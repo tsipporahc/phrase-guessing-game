@@ -32,8 +32,14 @@ const logPhrase = (phrase) => {
 
 
  // 4. test the addPhrasesToDisplay()  
-    const game = new Game();
+/*     const game = new Game();
     const randomPhrase = game.getRandomPhrase();
     const phrase = new Phrase(randomPhrase.phrase);
-    //phrase.addPhraseToDisplay();
-    //game.getRandomPhrase().addPhraseToDisplay();
+    phrase.addPhraseToDisplay();
+    game.getRandomPhrase().addPhraseToDisplay(); */
+
+    // 5. test the startGame()
+
+    const game = new Game();
+    game.startGame();
+    console.log(`Active Phrase - phrase: ${game.activePhrase.phrase}`);

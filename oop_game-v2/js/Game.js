@@ -17,14 +17,14 @@ let missed;
 let phrases = [];
 let activePhrase;
 let random;
-
+const overlay = document.getElementById('overlay');
 
 class Game {
     constructor () { 
         this.missed = 0;
-        this.phrases = [ new Phrase ('We make a great pear'), new Phrase ( 'Orange you glad we are friends'), new Phrase ('You are one in a melon'), new Phrase ('Pineapples on pizza are my jam'), new Phrase ('Thank you berry much')
+        this.phrases = [ new Phrase('We make a great pear'), new Phrase('Orange you glad we are friends'), new Phrase('You are one in a melon'), new Phrase('Pineapples on pizza are my jam'), new Phrase('Thank you berry much')
         ];
-        activePhrase = 'null'; 
+        this.activePhrase = 'null'; 
     }
         /**
          * Selects random phrase from phrases property
@@ -34,8 +34,20 @@ class Game {
          getRandomPhrase = () => {
             let random = Math.floor(Math.random() * (this.phrases.length)); 
             return this.phrases[random];
-        };
+        }
 
+        
+
+        /**
+        * Begins game by selecting a random phrase and displaying it to user
+        */
+        startGame = () => {
+            overlay.style.display = 'none';
+            this.activePhrase = this.getRandomPhrase();
+            activePhrase.addPhraseToDisplay();
+
+
+        }
 
 }
 

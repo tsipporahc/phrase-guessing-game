@@ -25,12 +25,10 @@ class Phrase {
     * Display phrase on game board
     */
      addPhraseToDisplay = () => {
-   
-        // how to break the string into letters? phrase.split(index) phrases.split(i) loop through the random phrase?
 
         
-            let phraseLetterArray = phrase.phrase.split(''); // returns array or letters
-            console.log(phraseLetterArray);
+        let phraseLetterArray = phrase.phrase.split(''); // return array or letters
+        console.log(phraseLetterArray);
 
         for (let i = 0; i < phraseLetterArray.length; i++) {
             let letter = phraseLetterArray[i];
