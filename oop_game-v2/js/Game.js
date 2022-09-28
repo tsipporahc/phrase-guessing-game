@@ -22,11 +22,12 @@ const activePhraseLetters = document.getElementsByClassName('letter');
 let hiddenLetters = document.getElementsByClassName('hide');
 const heart = document.getElementsByTagName('img');
 //const liveHeart = 'images/liveHeart.png';
+const gameOverMessage = document.getElementById('game-over-message');
 
 class Game {
     constructor () { 
         this.missed = 0;
-        this.phrases = [ new Phrase('We make a great pear'), new Phrase('Orange you glad we are friends'), new Phrase('You are one in a melon'), new Phrase('Pineapples on pizza are my jam'), new Phrase('Thank you berry much')
+        this.phrases = [ new Phrase('We make a great pear'), new Phrase('Orange you glad we are friends'), new Phrase('You are one in a melon'), new Phrase('Pineapples on pizza are my jam'), new Phrase('Thank you berry much'), new Phrase('test')
         ];
         this.activePhrase = 'null'; 
     }
@@ -70,6 +71,7 @@ class Game {
             if (hiddenLetters.length > 0) {
                 return false;
             } else {
+                //this.gameOver(true); // ???
                 return true;
             }
 
@@ -82,7 +84,7 @@ class Game {
         */
         removeLife = () => {
             if (matchedLetter == false) {
-                this.missed += 1;
+                this.missed += 1; // tracks number of missed
                 console.log(this.missed);
 
                 console.log(heart);
@@ -91,11 +93,30 @@ class Game {
                     return heart[this.missed - 1].src = 'images/lostHeart.png';
                 }
 
-
+                if (this.missed == 6 ) {
+                    this.gameOver(false);
+                }
 
             }
 
-            //this.gameOver();
+        };
+
+     
+        /**
+        * Displays game over message
+        * @param {boolean} gameWon - Whether or not the user won the game
+        */
+        gameOver(gameWon) {
+            overlay.style.display = 'flex'; // display overlay
+            console.log(gameOverMessage);
+            if (gameWon) {
+                gameOverMessage.textContent = 'You WON!';
+                overlay.className = 'win';
+            } else {
+                gameOverMessage.textContent = 'You LOSE!';
+                overlay.className = 'lose';
+            }
+
 
         };
 
