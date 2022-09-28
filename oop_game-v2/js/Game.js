@@ -139,6 +139,13 @@ class Game {
                 overlay.className = 'lose';
             }
 
+
+            startButton.addEventListener('click', () => {
+                this.reset();
+                game = new Game();
+                game.startGame();
+            })
+
         };
 
 
@@ -157,7 +164,7 @@ class Game {
                 console.log(key);
             }
 
-            for (let i = 0; i< heart.length; i++) {
+            for (let i = 0; i<heart.length; i++) {
                 heart[i].src = 'images/liveHeart.png';
             }
 
