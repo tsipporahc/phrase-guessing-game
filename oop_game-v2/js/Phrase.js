@@ -5,12 +5,9 @@
 
 const phraseSection = document.getElementById('phrase') // div
 const lettersPlaceholder = phraseSection.children; // ul
-
-let letterList = lettersPlaceholder[0];
-
+let letterList = lettersPlaceholder[0]; // li
 let phraseLetterArray = [];
 letterList.innerHTML = '';
-
 let matchedLetter = '';
 
 
@@ -24,7 +21,6 @@ class Phrase {
     */
     addPhraseToDisplay = () => {
         let phraseLetterArray = this.phrase.split(''); // return array of letters
-        console.log(phraseLetterArray);
 
         for (let i = 0; i < phraseLetterArray.length; i++) {
             let letter = phraseLetterArray[i];
@@ -45,28 +41,28 @@ class Phrase {
 
     };
 
-        /**
-        * Checks if passed letter is in phrase
-        * @param (string) letter - Letter to check
-        */
+    /**
+    * Checks if passed letter is in phrase
+    * @param (string) letter - Letter to check
+    */
     checkLetter = (letter) => {
-            let phraseLetterArray = this.phrase.split('');
-            console.log(letter);
-            if (phraseLetterArray.includes(letter)) {
-                return console.log(matchedLetter = true);
+        let phraseLetterArray = this.phrase.split('');
+
+        if (phraseLetterArray.includes(letter)) {
+            return matchedLetter = true;
             } else {
-                return console.log(matchedLetter = false);
+            return matchedLetter = false;
             }
     };
 
-        /**
-        * Displays passed letter on screen after a match is found
-        * @param (string) letter - Letter to display
-        */
+        
+    /**
+    * Displays passed letter on screen after a match is found
+    * @param (string) letter - Letter to display
+    */
     showMatchedLetter(letter) {
         if (letter) {
             const letterDisplay = document.getElementsByClassName(`${letter}`);
-            console.log(letterDisplay);
             
             for(let i=0; i < letterDisplay.length; i++) {
             letterDisplay[i].classList.remove('hide');
@@ -75,6 +71,6 @@ class Phrase {
             }
         }
 
-        };
+    };
 
 }
