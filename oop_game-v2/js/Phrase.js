@@ -17,18 +17,12 @@ let matchedLetter = '';
 class Phrase {
     constructor (phrase) { // intializes phrase and addPhraseToDisplay(), checkLetter(), showMatchedLetter()
         this.phrase = phrase.toLowerCase();
-       // const addPhraseToDisplay() => { // adds letter placeholders to the display when the game starts.
-
-       // }
-
     };
 
     /**
     * Display phrase on game board
     */
     addPhraseToDisplay = () => {
-
-        
         let phraseLetterArray = this.phrase.split(''); // return array of letters
         console.log(phraseLetterArray);
 
@@ -47,9 +41,7 @@ class Phrase {
                 letterList.appendChild(li);
             }
 
-
         }
-
 
     };
 
@@ -61,10 +53,8 @@ class Phrase {
             let phraseLetterArray = this.phrase.split('');
             console.log(letter);
             if (phraseLetterArray.includes(letter)) {
-                //matchedLetter == true;
                 return console.log(matchedLetter = true);
             } else {
-                //matchedLetter == false;
                 return console.log(matchedLetter = false);
             }
     };
@@ -74,8 +64,6 @@ class Phrase {
         * @param (string) letter - Letter to display
         */
     showMatchedLetter(letter) {
-// select letter DOM with CSS class name that matches the ' letter ${letter}'
-// replace CSS class name from 'hide' to 'show'
         if (letter) {
             const letterDisplay = document.getElementsByClassName(`${letter}`);
             console.log(letterDisplay);
@@ -88,13 +76,5 @@ class Phrase {
         }
 
         };
-
-
-
-
-
-
-
-
 
 }

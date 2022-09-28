@@ -21,7 +21,6 @@ const overlay = document.getElementById('overlay');
 const activePhraseLetters = document.getElementsByClassName('letter');
 let hiddenLetters = document.getElementsByClassName('hide');
 const heart = document.getElementsByTagName('img');
-//const liveHeart = 'images/liveHeart.png';
 const gameOverMessage = document.getElementById('game-over-message');
 
 class Game {
@@ -30,7 +29,9 @@ class Game {
         this.phrases = [ new Phrase('We make a great pear'), new Phrase('Orange you glad we are friends'), new Phrase('You are one in a melon'), new Phrase('Pineapples on pizza are my jam'), new Phrase('Thank you berry much'), new Phrase('test')
         ];
         this.activePhrase = 'null'; 
-    }
+    };
+
+
         /**
          * Selects random phrase from phrases property
          *  return {object} Phrase object chosen to be used
@@ -39,7 +40,7 @@ class Game {
          getRandomPhrase = () => {
             let random = Math.floor(Math.random() * (this.phrases.length)); 
             return this.phrases[random];
-        }
+        };
 
         
 
@@ -52,7 +53,7 @@ class Game {
             this.activePhrase.addPhraseToDisplay();
 
 
-        }
+        };
 
 
         /**
@@ -168,11 +169,7 @@ class Game {
                 heart[i].src = 'images/liveHeart.png';
             }
 
-            
-
         };
-
-
 
 }
 
