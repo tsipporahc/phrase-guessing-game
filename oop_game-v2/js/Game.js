@@ -110,13 +110,12 @@ class Game {
             overlay.style.display = 'flex'; // display overlay
             console.log(gameOverMessage);
             if (gameWon) {
-                gameOverMessage.textContent = 'You WON!';
+                gameOverMessage.innerHTML = `You WON! Nice work! <br><i>Number of loses: ${this.missed}/5</i>`;
                 overlay.className = 'win';
             } else {
-                gameOverMessage.textContent = 'You LOSE!';
+                gameOverMessage.innerHTML = `You LOSE! Try again. <br><i>Number of loses: ${this.missed}/5</i>`;
                 overlay.className = 'lose';
             }
-
 
         };
 
