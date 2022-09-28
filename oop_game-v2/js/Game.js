@@ -26,7 +26,7 @@ const gameOverMessage = document.getElementById('game-over-message');
 class Game {
     constructor () { 
         this.missed = 0;
-        this.phrases = [ new Phrase('We make a great pear'), new Phrase('Orange you glad we are friends'), new Phrase('You are one in a melon'), new Phrase('Pineapples on pizza are my jam'), new Phrase('Thank you berry much'), new Phrase('test')
+        this.phrases = [ new Phrase('We make a great pear'), new Phrase('Orange you glad we are friends'), new Phrase('You are one in a melon'), new Phrase('Pineapples on pizza are my jam'), new Phrase('Thank you berry much')
         ];
         this.activePhrase = 'null'; 
     };
@@ -62,8 +62,6 @@ class Game {
         */
         handleInteraction(button) {
             button.disabled = true;
-            console.log(button.textContent);
-            
             this.activePhrase.checkLetter(button.textContent);
             if (matchedLetter) {
                 button.classList.add('chosen');
@@ -71,13 +69,10 @@ class Game {
                 this.checkForWin();
                     if (this.checkForWin()) {
                         this.gameOver(true);
-                    }
-                    
-                console.log(button);
+                    }       
             } else {
                 button.classList.add('wrong');
                 this.removeLife();
-                console.log(button);
             }
   
             
@@ -89,9 +84,6 @@ class Game {
         * @return {boolean} True if game has been won, false if game wasn't won
         */
         checkForWin = () => {
-            console.log(hiddenLetters);
-            console.log(hiddenLetters.length);
-
             if (hiddenLetters.length > 0) {
                 return false;
             } else {
@@ -108,11 +100,6 @@ class Game {
         */
         removeLife = () => {
                 this.missed += 1; // tracks number of missed
-                console.log(this.missed);
-
-                console.log(heart);
-
-
                 if (this.missed >= 0 && this.missed < 5 ) {
                 if (heart[this.missed - 1].src = 'images/liveHeart.png') {
                     return heart[this.missed - 1].src = 'images/lostHeart.png';
@@ -131,7 +118,6 @@ class Game {
         */
         gameOver(gameWon) {
             overlay.style.display = 'flex'; // display overlay
-            console.log(gameOverMessage);
             if (gameWon) {
                 gameOverMessage.innerHTML = `You WON! Nice work! <br><i>Number of loses: ${this.missed}/5</i>`;
                 overlay.className = 'win';
@@ -156,13 +142,10 @@ class Game {
         */
         reset = () => {
             letterList.innerHTML = ''; // remove li elements
-            console.log(letterList);
-
             const key = document.getElementsByClassName('key');
             for (let i = 0; i<key.length; i++ ) {
                 key[i].disabled = false;
                 key[i].className = 'key';
-                console.log(key);
             }
 
             for (let i = 0; i<heart.length; i++) {
