@@ -19,6 +19,4 @@ keyboard.addEventListener('click', (e) => {
         }
         });
 
-
-
     
