@@ -61,8 +61,10 @@ class Phrase {
             let phraseLetterArray = this.phrase.split('');
             
             if (phraseLetterArray.includes(letter)) {
+                matchedLetter == true;
                 return true;
             } else {
+                matchedLetter == false;
                 return false;
             }
     };

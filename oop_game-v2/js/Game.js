@@ -20,6 +20,8 @@ let random;
 const overlay = document.getElementById('overlay');
 const activePhraseLetters = document.getElementsByClassName('letter');
 let hiddenLetters = document.getElementsByClassName('hide');
+const heart = document.getElementsByTagName('img');
+//const liveHeart = 'images/liveHeart.png';
 
 class Game {
     constructor () { 
@@ -73,7 +75,29 @@ class Game {
 
         };
 
+        /**
+        * Increases the value of the missed property
+        * Removes a life from the scoreboard
+        * Checks if player has remaining lives and ends game if player is out
+        */
+        removeLife = () => {
+            if (matchedLetter == false) {
+                this.missed += 1;
+                console.log(this.missed);
 
+                console.log(heart);
+
+                if (heart[this.missed - 1].src = 'images/liveHeart.png') {
+                    return heart[this.missed - 1].src = 'images/lostHeart.png';
+                }
+
+
+
+            }
+
+            //this.gameOver();
+
+        };
 
 
 }
