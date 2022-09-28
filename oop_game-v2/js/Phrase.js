@@ -62,10 +62,10 @@ class Phrase {
             console.log(letter);
             if (phraseLetterArray.includes(letter)) {
                 //matchedLetter == true;
-                return console.log(matchedLetter = true);
+                return console.log(true);
             } else {
                 //matchedLetter == false;
-                return console.log(matchedLetter = false);
+                return console.log(false);
             }
     };
 

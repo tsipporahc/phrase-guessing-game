@@ -78,30 +78,10 @@ class Game {
                 this.removeLife();
                 console.log(button);
             }
-
-            
-/*             const letter = button.textContent;
-            phrase.checkLetter(letter); */
-
-
-/*             game.activePhrase.showMatchedLetter(button.textContent, (matchedLetter) => {
-                if (matchedLetter == false) {
-                    button.classList.add('wrong');
-                }
-
-            })  */
-            
-            console.log(matchedLetter);
-            
-            
+  
             
         };
 
-        /* handleInteraction = () => {
-            this.checkForWin(); // make into callback???
-
-
-        } */
 
         /**
         * Checks for winning move
