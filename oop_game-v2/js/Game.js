@@ -60,7 +60,41 @@ class Game {
         * @param (HTMLButtonElement) button - The clicked button element
         */
         handleInteraction(button) {
-        console.log(button);
+            button.disabled = true;
+            console.log(button.textContent);
+            
+            this.activePhrase.checkLetter(button.textContent);
+            if (matchedLetter) {
+                button.classList.add('chosen');
+                this.activePhrase.showMatchedLetter(button.textContent);
+                this.checkForWin();
+                    if (this.checkForWin()) {
+                        this.gameOver(true);
+                    }
+                    
+                console.log(button);
+            } else {
+                button.classList.add('wrong');
+                this.removeLife();
+                console.log(button);
+            }
+
+            
+/*             const letter = button.textContent;
+            phrase.checkLetter(letter); */
+
+
+/*             game.activePhrase.showMatchedLetter(button.textContent, (matchedLetter) => {
+                if (matchedLetter == false) {
+                    button.classList.add('wrong');
+                }
+
+            })  */
+            
+            console.log(matchedLetter);
+            
+            
+            
         };
 
         /* handleInteraction = () => {
@@ -92,21 +126,22 @@ class Game {
         * Checks if player has remaining lives and ends game if player is out
         */
         removeLife = () => {
-            if (matchedLetter == false) {
+            //if (matchedLetter == false) {
                 this.missed += 1; // tracks number of missed
                 console.log(this.missed);
 
                 console.log(heart);
 
+
+                if (this.missed >= 0 && this.missed < 5 ) {
                 if (heart[this.missed - 1].src = 'images/liveHeart.png') {
                     return heart[this.missed - 1].src = 'images/lostHeart.png';
                 }
-
-                if (this.missed == 6 ) {
+            } else if (this.missed == 5 ) {
                     this.gameOver(false);
                 }
 
-            }
+            //}
 
         };
 

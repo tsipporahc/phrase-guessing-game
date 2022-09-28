@@ -59,6 +59,9 @@ const logPhrase = (phrase) => {
         keyboardButton[i].addEventListener('click', game.handleInteraction);
         } */
 
+
+
+
         keyboard.addEventListener('click', (e) => {
             if (e.target.classList == 'key') {
                 game.handleInteraction(e.target);

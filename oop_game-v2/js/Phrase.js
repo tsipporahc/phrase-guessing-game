@@ -59,13 +59,13 @@ class Phrase {
         */
     checkLetter = (letter) => {
             let phraseLetterArray = this.phrase.split('');
-            
+            console.log(letter);
             if (phraseLetterArray.includes(letter)) {
-                matchedLetter == true;
-                return true;
+                //matchedLetter == true;
+                return console.log(matchedLetter = true);
             } else {
-                matchedLetter == false;
-                return false;
+                //matchedLetter == false;
+                return console.log(matchedLetter = false);
             }
     };
 
