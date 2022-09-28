@@ -61,7 +61,7 @@ const logPhrase = (phrase) => {
 
         keyboard.addEventListener('click', (e) => {
             if (e.target.classList == 'key') {
-                game.handleInteraction(e.target.textContent);
+                game.handleInteraction(e.target);
             }
 
         });
