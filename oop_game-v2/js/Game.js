@@ -106,7 +106,6 @@ class Game {
         * Checks if player has remaining lives and ends game if player is out
         */
         removeLife = () => {
-            //if (matchedLetter == false) {
                 this.missed += 1; // tracks number of missed
                 console.log(this.missed);
 
@@ -121,7 +120,6 @@ class Game {
                     this.gameOver(false);
                 }
 
-            //}
 
         };
 
@@ -142,6 +140,31 @@ class Game {
             }
 
         };
+
+
+        /**
+        * reset the gameboard between games
+        * 
+        */
+        reset = () => {
+            letterList.innerHTML = ''; // remove li elements
+            console.log(letterList);
+
+            const key = document.getElementsByClassName('key');
+            for (let i = 0; i<key.length; i++ ) {
+                key[i].disabled = false;
+                key[i].className = 'key';
+                console.log(key);
+            }
+
+            for (let i = 0; i< heart.length; i++) {
+                heart[i].src = 'images/liveHeart.png';
+            }
+
+            
+
+        };
+
 
 
 }
