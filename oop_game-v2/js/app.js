@@ -50,3 +50,22 @@ const logPhrase = (phrase) => {
         game = new Game();
         game.startGame();
     })
+
+    const keyboard = document.getElementById('qwerty');
+    console.log(keyboard);
+
+/*     for (let i=0; i<keyboardButton.length; i++) {
+        console.log(keyboardButton[i]);
+        keyboardButton[i].addEventListener('click', game.handleInteraction);
+        } */
+
+        keyboard.addEventListener('click', (e) => {
+            if (e.target.classList == 'key') {
+                game.handleInteraction(e.target.textContent);
+            }
+
+        });
+
+
+
+    
