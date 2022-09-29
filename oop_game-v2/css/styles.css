@@ -60,6 +60,12 @@ button {
   cursor: pointer;
 }
 
+button:hover{
+  border-color: #563b54;
+  border: 1px solid;
+  box-shadow: 1px 1px 5px;
+}
+
 #btn__reset {
 	width: 200px;
 	margin: 0 auto;
