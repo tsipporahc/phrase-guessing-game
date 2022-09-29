@@ -127,6 +127,7 @@ class Game {
             }
 
 
+
             startButton.addEventListener('click', () => {
                 this.reset();
                 game = new Game();
@@ -142,10 +143,10 @@ class Game {
         */
         reset = () => {
             letterList.innerHTML = ''; // remove li elements
-            const key = document.getElementsByClassName('key');
-            for (let i = 0; i<key.length; i++ ) {
-                key[i].disabled = false;
-                key[i].className = 'key';
+            //const key = document.getElementsByClassName('key');
+            for (let i = 0; i<button.length; i++ ) {
+                button[i].disabled = false;
+                button[i].className = 'key';
             }
 
             for (let i = 0; i<heart.length; i++) {

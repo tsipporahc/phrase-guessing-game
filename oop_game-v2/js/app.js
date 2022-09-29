@@ -17,7 +17,7 @@ startButton.addEventListener('click', () => {
     })
 
 const keyboard = document.getElementById('qwerty');
-
+const button = document.getElementsByClassName('key');
 /**
 * Listens for clicks on the keyboard buttons
 * calls method that matches keyboard clicks to letters in the phrase
@@ -26,6 +26,25 @@ keyboard.addEventListener('click', (e) => {
     if (e.target.classList == 'key') {
         game.handleInteraction(e.target);
         }
-        });
+        console.log(e.target);
+    });
+
+
+
+
+document.addEventListener('keyup', (e) => {
+    
+    if (overlay.style.display == 'none') {
+        for (let i=0; i<button.length; i++) {
+            if (button[i].textContent === e.key) {
+                game.handleInteraction(button[i]);
+                console.log(button[i]);
+            }
+        }
+    } else if (overlay.style.display == 'flex') {
+        onkeyup = null;
+    }
+    
+});
 
     
