@@ -3,6 +3,14 @@
  * Phrase.js 
  * Purpose: To create a Phrase class to handle the creation of phrases */
 
+/* 
+ * About Phrase Class
+ * 
+ * initializes Phrase Object 
+ * initializes addPhraseToDisplay(), checkLetter(), showMatchedLetter()
+ * matchedLetter - returns boolean, tells whether letter from keyboard matches letter in active phrase
+ * */
+
 const phraseSection = document.getElementById('phrase') // div
 const lettersPlaceholder = phraseSection.children; // ul
 let letterList = lettersPlaceholder[0]; // li
@@ -12,7 +20,7 @@ let matchedLetter = '';
 
 
 class Phrase {
-    constructor (phrase) { // intializes phrase and addPhraseToDisplay(), checkLetter(), showMatchedLetter()
+    constructor (phrase) {
         this.phrase = phrase.toLowerCase();
     };
 

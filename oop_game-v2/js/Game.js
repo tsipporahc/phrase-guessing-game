@@ -6,7 +6,7 @@ interactions, getting a random phrase, checking for a win, and removing a life f
 scoreboard.*/
 
 /* 
- * Game Class
+ * About Game Class
  * 
  * missed - Used to track the number of missed guesses by the player.
  * phrases - An array of Phrase objects to use with the game.
