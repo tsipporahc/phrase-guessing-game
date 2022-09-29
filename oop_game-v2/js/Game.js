@@ -117,6 +117,7 @@ class Game {
         * @param {boolean} gameWon - Whether or not the user won the game
         */
         gameOver(gameWon) {
+            let title = document.getElementsByClassName('title');
             overlay.style.display = 'flex'; // display overlay
             if (gameWon) {
                 gameOverMessage.innerHTML = `You WON! Nice work! <br><i>Number of loses: ${this.missed}/5</i>`;
