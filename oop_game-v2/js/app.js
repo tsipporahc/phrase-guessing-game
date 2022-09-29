@@ -18,8 +18,9 @@ startButton.addEventListener('click', () => {
 
 const keyboard = document.getElementById('qwerty');
 const button = document.getElementsByClassName('key');
+
 /**
-* Listens for clicks on the keyboard buttons
+* Listens for clicks on the on screen keyboard buttons
 * calls method that matches keyboard clicks to letters in the phrase
 */
 keyboard.addEventListener('click', (e) => {
@@ -31,7 +32,11 @@ keyboard.addEventListener('click', (e) => {
 
 
 
-
+/**
+* Listens for clicks on the user's keyboard
+* calls method that matches user's keyboard clicks to letters in the phrase
+* stops key up at the game over screen
+*/
 document.addEventListener('keyup', (e) => {
     
     if (overlay.style.display == 'none') {
