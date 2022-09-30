@@ -75,7 +75,6 @@ class Phrase {
             for(let i=0; i < letterDisplay.length; i++) {
             letterDisplay[i].classList.remove('hide');
             letterDisplay[i].classList.add('show');
-            letterDisplay[i].style.display == 'none';
             }
         }
 
