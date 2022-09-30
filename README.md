@@ -14,7 +14,14 @@
     This project was challenging but rewarding. I learned about the importance of testing and creating and calling properties and methods in classes. The removeLife() method located in Game.js was the most challenging to create because I had to figure out how to get the Game.js file and the Phrase.js file to communicate to one another. 
 
 **Future Considerations:**
-    There are many things I would love to add on to this app. For example, I could add a timer or have users choose a difficulty level for the game. It would also be useful to create an interactive keyboard that responds to keyboard strokes, or up and down arrows to increase accessibility. 
+    There are many things I would love to add on to this app. For example, I could add a timer or have users choose a difficulty level for the game.
+
+## Project Styling Changes
+    -Starting Page: changed the title of the game with subtitle, background color
+    -Keyboard Buttons: increased border radius for static keyboard, decreased border radius for letter when wrong, decreased border radius for letter when wrong, changed button color upon selection, added shadowing and hover effects
+    -Start Button: changed background color, added hover effects
+    -Letter Placeholders: changed color, and added shadow effect
+    -Game End Page: added number of loses to track user's loses
 
 ## Project Source
     - [Treehouse Unit 4 Project] (https://teamtreehouse.com/projects/oop-game-show-app)
