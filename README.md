@@ -18,9 +18,13 @@
 
 **Project Styling Changes:**
 -Starting Page: changed the title of the game with subtitle, background color
+
 -Keyboard Buttons: increased border radius for static keyboard, decreased border radius for letter when wrong, decreased border radius for letter when wrong, changed button color upon selection, added shadowing and hover effects
+
 -Start Button: changed background color, added hover effects
+
 -Letter Placeholders: changed color, and added shadow effect
+
 -Game End Page: added number of loses to track user's loses
 
 ## Project Source
