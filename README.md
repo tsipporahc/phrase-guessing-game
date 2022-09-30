@@ -6,8 +6,11 @@
 
 **Game Rules:** 
     1. Click "Start Game" button to display a gameboard with a random quote inspired by fruits.
+
     2. Click the on-screen keyboard to guess a letter in the phrase.
+
     3. If you you choose an incorrect letter, you will lose a heart/life. You have 5 chances to miss until you lose the game.
+    
     4. After the game is over, click "Start Game" button to play a new game. 
 
 **Challenges:**
