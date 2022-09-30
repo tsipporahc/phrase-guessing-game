@@ -16,7 +16,7 @@
 **Future Considerations:**
     There are many things I would love to add on to this app. For example, I could add a timer or have users choose a difficulty level for the game.
 
-## Project Styling Changes
+**Project Styling Changes:**
     -Starting Page: changed the title of the game with subtitle, background color
     -Keyboard Buttons: increased border radius for static keyboard, decreased border radius for letter when wrong, decreased border radius for letter when wrong, changed button color upon selection, added shadowing and hover effects
     -Start Button: changed background color, added hover effects
