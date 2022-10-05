@@ -99,18 +99,16 @@ class Game {
         * Checks if player has remaining lives and ends game if player is out
         */
         removeLife = () => {
-            this.missed += 1; // tracks number of missed
-            if (this.missed >= 0 && this.missed < 5 ) {
+            const img = document.querySelectorAll('img');
+            
+            console.log(this.missed);
+            if (this.missed < 4 ) {
+                
+                img[this.missed].src = 'images/lostHeart.png';
+                this.missed += 1; // tracks number of missed
 
-                const img = document.querySelector('img');
-
-                if (img.src = 'images/liveHeart.png') {
-                    return img.src = 'images/lostHeart.png';
-
-                }
-
-            } else if (this.missed == 5 ) {
-                    this.gameOver(false);
+            } else {
+                this.gameOver(false);
             }
 
 
