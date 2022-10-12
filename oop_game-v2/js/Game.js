@@ -123,10 +123,10 @@ class Game {
             let title = document.getElementsByClassName('title');
             overlay.style.display = 'flex'; // display overlay
             if (gameWon) {
-                gameOverMessage.innerHTML = `You WON! Nice work! <br><i>Number of loses: ${this.missed}/5</i>`;
+                gameOverMessage.innerHTML = `You WON! Nice work! <br><i>Number of loses: ${this.missed - 1 }/5</i>`;
                 overlay.className = 'win';
             } else {
-                gameOverMessage.innerHTML = `You LOSE! Try again. <br><i>Number of loses: ${this.missed}/5</i>`;
+                gameOverMessage.innerHTML = `You LOSE! Try again. <br><i>Number of loses: ${this.missed + 1 }/5</i>`;
                 overlay.className = 'lose';
             }
 
