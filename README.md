@@ -2,7 +2,7 @@
  Techdegree Unit 4 Project
 
 **Purpose:** 
-    This project was created to demonstrate foundational concepts in Javascript OOP and DOM manipulation. I created an a Phrase class to carry the phrases. I also created a Game class to carry the logic of the game. This is the final project for Unit 4 of the Treehouse Techdegree.
+    This project was created to demonstrate foundational concepts in Javascript OOP and DOM manipulation. I created a Phrase class to carry the phrases. I also created a Game class to carry the logic of the game. This is the final project for Unit 4 of the Treehouse Techdegree.
 
 **Game Rules:** 
 1. Click "Start Game" button to display a gameboard with a random quote inspired by fruits.
